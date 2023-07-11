@@ -57,6 +57,7 @@ h1 {
 }
 .main-right {
   width: 50%;
+  z-index: -2;
 }
 .main-right img {
   width: 100%;
@@ -140,4 +141,39 @@ footer img {
   .footer-left ul {
     align-items: center;
   }
+}
+
+.cursor {
+  height: 1px;
+  width: 1px;
+  border: 1px solid yellow;
+  border-radius: 50px;
+  position: absolute;
+  background: yellow;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.cursor2 {
+  height: 90px;
+  width: 90px;
+  border: 1px solid white;
+  border-radius: 50px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: 0.1s ease-out;
+  mix-blend-mode: luminosity;
+  z-index: -1;
+}
+
+.cursor3 {
+  height: 180px;
+  width: 180px;
+  border: 1px solid white;
+  border-radius: 150px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.385);
+  transform: translate(-50%, -50%);
+  transition: 0.2s ease-out;
+  z-index: -1;
 }
