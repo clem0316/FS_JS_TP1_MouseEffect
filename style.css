@@ -16,7 +16,11 @@ a:visited {
   color: white;
   text-decoration: none;
   transition: 0.3s;
+  z-index: 1000;
+  position: relative;
 }
+/* ATTENTION ! : pour le z-index, il faut parfois mettre en position-relative les éléments concernés pour que cela marche ! */
+
 a:hover {
   font-size: 1.3rem;
   color: #2128bd;
@@ -57,7 +61,6 @@ h1 {
 }
 .main-right {
   width: 50%;
-  z-index: -2;
 }
 .main-right img {
   width: 100%;
@@ -143,37 +146,32 @@ footer img {
   }
 }
 
-.cursor {
-  height: 1px;
-  width: 1px;
+#cursor {
+  height: 14px;
+  width: 14px;
   border: 1px solid yellow;
   border-radius: 50px;
-  position: absolute;
   background: yellow;
-  transform: translate(-50%, -50%);
-  z-index: -1;
 }
 
-.cursor2 {
+#mouse1 {
   height: 90px;
   width: 90px;
-  border: 1px solid white;
+  background: rgba(255, 255, 255);
   border-radius: 50px;
-  position: absolute;
-  transform: translate(-50%, -50%);
   transition: 0.1s ease-out;
-  mix-blend-mode: luminosity;
-  z-index: -1;
 }
 
-.cursor3 {
+#mouse2 {
   height: 180px;
   width: 180px;
-  border: 1px solid white;
   border-radius: 150px;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.385);
-  transform: translate(-50%, -50%);
+  background: rgba(40, 39, 39);
   transition: 0.2s ease-out;
-  z-index: -1;
+}
+
+.mouses {
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  position: absolute;
 }
